@@ -38,7 +38,7 @@ const TodaySchedule = () => {
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-base font-bold text-gray-900">Today's Schedule</h2>
+        <h2 className="text-base font-bold text-gray-900">Today&apos;s Schedule</h2>
         <button className="text-xs font-medium text-gray-600 hover:text-gray-800 flex items-center gap-1">
           View Full Timetable <ArrowRight className="w-3 h-3" />
         </button>
