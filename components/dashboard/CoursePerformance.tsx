@@ -22,7 +22,7 @@ const CoursePerformance = () => {
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
       <div className="flex items-center justify-between mb-3">
-        <h2 className="text-base font-bold text-gray-900">Course Performance</h2>
+        <h2 className="text-lg font-semibold text-gray-900">Course Performance</h2>
         <button className="text-xs font-medium text-gray-600 hover:text-gray-800 flex items-center gap-1">
           View Details <ArrowRight className="w-3 h-3" />
         </button>
@@ -56,10 +56,10 @@ const CoursePerformance = () => {
                 style={{ 
                   width: isLoaded ? `${course.grade}%` : '0%',
                   transitionDelay: `${index * 150}ms`,
-                  backgroundColor: '#024698'
+                  backgroundColor: '#026892'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#013a7a'}
-                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#024698'}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#024a73'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#026892'}
               />
             </div>
             {hoveredCourse === index && (

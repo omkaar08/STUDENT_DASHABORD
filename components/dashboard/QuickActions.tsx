@@ -1,10 +1,11 @@
-import { Calendar, FileText, CreditCard, BookOpen } from "lucide-react";
+import { Calendar, GraduationCap, Clock, FileText } from "lucide-react";
 
 interface QuickAction {
   id: string;
   title: string;
   icon: React.ElementType;
-  description: string;
+  bgColor: string;
+  iconColor: string;
 }
 
 const quickActions: QuickAction[] = [
@@ -12,47 +13,48 @@ const quickActions: QuickAction[] = [
     id: "1",
     title: "View Timetable",
     icon: Calendar,
-    description: "Check your class schedule",
+    bgColor: "bg-blue-50 hover:bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
     id: "2",
-    title: "Submit Assignment",
-    icon: FileText,
-    description: "Upload coursework",
+    title: "View Grades",
+    icon: GraduationCap,
+    bgColor: "bg-blue-50 hover:bg-blue-100",
+    iconColor: "text-blue-600",
   },
   {
     id: "3",
-    title: "Pay Fees",
-    icon: CreditCard,
-    description: "Manage payments",
+    title: "Check Attendance",
+    icon: Clock,
+    bgColor: "bg-orange-50 hover:bg-orange-100",
+    iconColor: "text-orange-600",
   },
   {
     id: "4",
-    title: "Course Materials",
-    icon: BookOpen,
-    description: "Access resources",
+    title: "Request Document",
+    icon: FileText,
+    bgColor: "bg-orange-50 hover:bg-orange-100",
+    iconColor: "text-orange-600",
   },
 ];
 
 const QuickActions = () => {
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
-      <h2 className="text-base font-bold text-gray-900 mb-3">Quick Actions</h2>
-      <div className="space-y-2">
+    <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
+      <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h2>
+      <div className="space-y-3">
         {quickActions.map((action) => {
           const IconComponent = action.icon;
           return (
             <button
               key={action.id}
-              className="w-full flex items-center gap-3 p-3 rounded-xl border border-[#024698]/20 bg-[#024698]/5 hover:bg-[#024698]/10 transition-all duration-200"
+              className={`w-full flex items-center gap-3 p-3.5 rounded-xl ${action.bgColor} transition-all duration-200`}
             >
-              <div className="w-8 h-8 rounded-lg bg-white flex items-center justify-center">
-                <IconComponent className="w-4 h-4 text-[#024698]" />
-              </div>
-              <div className="text-left">
-                <p className="text-sm font-medium text-gray-900">{action.title}</p>
-                <p className="text-xs text-gray-500">{action.description}</p>
-              </div>
+              <IconComponent className={`w-5 h-5 ${action.iconColor}`} />
+              <span className="text-sm font-medium text-gray-700">
+                {action.title}
+              </span>
             </button>
           );
         })}

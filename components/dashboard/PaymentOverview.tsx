@@ -2,9 +2,9 @@ import { BookOpen } from "lucide-react";
 
 const PaymentOverview = () => {
   const recentGrades = [
-    { assessment: "Midterm Exam", course: "Database Systems", grade: "A-", score: 88 },
-    { assessment: "Project 2", course: "Software Engineering", grade: "A", score: 92 },
-    { assessment: "Lab Report 3", course: "Computer Networks", grade: "B+", score: 85 }
+    { assessment: "Midterm Exam", course: "Database Systems", grade: "A-", score: 88, bgColor: "bg-blue-50" },
+    { assessment: "Project 2", course: "Software Engineering", grade: "A", score: 92, bgColor: "bg-blue-50" },
+    { assessment: "Lab Report 3", course: "Computer Networks", grade: "B+", score: 85, bgColor: "bg-orange-50" }
   ];
 
   const getGradeColor = (grade: string) => {
@@ -15,32 +15,23 @@ const PaymentOverview = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
-      <div className="flex items-center gap-2 mb-3">
-        <BookOpen className="w-4 h-4 text-gray-600" />
-        <h2 className="text-base font-bold text-gray-900">Recent Activity</h2>
-      </div>
+    <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
+      <h2 className="text-lg font-semibold text-gray-900 mb-4">Recent Activity</h2>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         {recentGrades.map((item, index) => (
-          <div key={index} className="bg-gray-50 rounded-lg p-3 border border-gray-100">
+          <div key={index} className={`${item.bgColor} p-3 rounded-lg border border-gray-200 transition-all duration-200`}>
             <div className="flex items-center justify-between">
-              <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-gray-900 truncate">{item.assessment}</p>
-                <p className="text-xs text-gray-500 mt-0.5">{item.course}</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">{item.assessment}</h3>
+                <p className="text-xs text-gray-600">{item.course}</p>
               </div>
-              <span className={`px-2 py-1 rounded text-xs font-medium ml-2 flex-shrink-0 ${getGradeColor(item.grade)}`}>
-                {item.grade}
-              </span>
+              <button className="px-3 py-1.5 bg-white border border-gray-300 rounded-md text-xs font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                View
+              </button>
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="pt-3 mt-2 border-t border-gray-100">
-        <div className="text-xs text-gray-500">
-          <span>Last updated: Dec 18, 2023</span>
-        </div>
       </div>
     </div>
   );

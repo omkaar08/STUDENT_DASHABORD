@@ -19,11 +19,11 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-background">
+      <TopBar />
       <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
 
       {/* Main Content */}
-      <main className="lg:ml-64 min-h-screen">
-        <TopBar />
+      <main className="lg:ml-64 min-h-screen pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Header />
 
@@ -35,6 +35,7 @@ export default function Dashboard() {
                 value="95.0%"
                 subtitle="2.5% from last semester"
                 icon={BookOpen}
+                iconColor="bg-blue-50"
                 trend={{ value: "2.5% from last semester", positive: true }}
               />
             </div>
@@ -45,6 +46,7 @@ export default function Dashboard() {
                 subtitle="48 of 60 classes attended"
                 subtitleColor="green"
                 icon={CheckCircle}
+                iconColor="bg-green-50"
               />
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "100ms" }}>
@@ -54,6 +56,7 @@ export default function Dashboard() {
                 subtitle="2 require immediate action"
                 subtitleColor="red"
                 icon={Clock}
+                iconColor="bg-orange-50"
               />
             </div>
             <div className="animate-fade-in" style={{ animationDelay: "150ms" }}>
@@ -63,6 +66,7 @@ export default function Dashboard() {
                 subtitle="37.5% of degree completed"
                 subtitleColor="green"
                 icon={BarChart3}
+                iconColor="bg-purple-50"
               />
             </div>
           </div>

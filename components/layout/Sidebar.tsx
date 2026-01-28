@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const BRAND_BLUE = "#024698";
+const BRAND_BLUE = "#026892";
 
 interface NavItem {
   id: string;
@@ -85,35 +85,12 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-50 transition-transform duration-300 lg:translate-x-0",
+          "fixed top-0 left-0 h-full w-64 bg-white border-r border-gray-200 z-40 transition-transform duration-300 lg:translate-x-0",
           isOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
-        {/* ===== Sidebar Header (aligned with topbar) ===== */}
-        <div className="h-16 flex items-center px-4 border-b border-gray-200">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-9 h-9 rounded-full flex items-center justify-center"
-              style={{ backgroundColor: BRAND_BLUE }}
-            >
-              <span className="text-white font-semibold text-sm">UR</span>
-            </div>
-            <div className="leading-tight">
-              <h1 className="text-sm font-semibold text-gray-900">SAMPS UR</h1>
-              <p className="text-xs text-gray-500">Student Dashboard</p>
-            </div>
-          </div>
-
-          <button
-            onClick={onToggle}
-            className="ml-auto lg:hidden p-1 hover:bg-gray-100 rounded"
-          >
-            <X className="w-5 h-5 text-gray-500" />
-          </button>
-        </div>
-
         {/* ===== Navigation ===== */}
-        <nav className="p-3 space-y-1">
+        <nav className="p-3 space-y-1 mt-16">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isExpanded = expandedItems.includes(item.id);
@@ -151,7 +128,7 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
                     {item.children!.map((child) => (
                       <button
                         key={child.id}
-                        className="w-full text-left px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-blue-50 hover:text-[#024698] transition-colors"
+                        className="w-full text-left px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-blue-50 hover:text-[#026892] transition-colors"
                       >
                         {child.label}
                       </button>
@@ -167,7 +144,7 @@ const Sidebar = ({ isOpen, onToggle }: SidebarProps) => {
       {/* Mobile toggle */}
       <button
         onClick={onToggle}
-        className="fixed top-4 left-4 z-30 p-2 bg-white rounded-lg shadow border border-gray-200 lg:hidden"
+        className="fixed top-20 left-4 z-30 p-2 bg-white rounded-lg shadow border border-gray-200 lg:hidden"
       >
         <Menu className="w-5 h-5 text-gray-900" />
       </button>

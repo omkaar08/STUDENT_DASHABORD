@@ -27,10 +27,10 @@ const AttendanceTrends = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-1">
         <div className="flex items-center gap-2">
-          <h2 className="text-lg font-bold text-gray-900">Attendance Trends</h2>
-          <RefreshCw className="w-4 h-4 text-gray-400" />
+          <h2 className="text-lg font-semibold text-gray-900">Attendance Trends</h2>
+         
         </div>
-        <button className="text-sm font-medium text-[#024698] hover:text-[#013a7a] flex items-center gap-1">
+        <button className="text-sm font-medium text-[#026892] hover:text-[#024a73] flex items-center gap-1">
           View Details <ArrowRight className="w-4 h-4" />
         </button>
       </div>
@@ -84,7 +84,7 @@ const AttendanceTrends = () => {
                       className="w-full absolute bottom-0 transition-all duration-1000 ease-out"
                       style={{ 
                         height: `${barHeight}px`,
-                        backgroundColor: '#024698',
+                        backgroundColor: '#026892',
                         transitionDelay: `${index * 100}ms`
                       }}
                     />

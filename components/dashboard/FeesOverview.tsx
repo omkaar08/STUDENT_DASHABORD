@@ -20,7 +20,7 @@ const FeesOverview = () => {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <CreditCard className="w-4 h-4 text-gray-600" />
-          <h2 className="text-base font-bold text-gray-900">Fee Status</h2>
+          <h2 className="text-lg font-semibold text-gray-900">Fee Status</h2>
         </div>
         <span className="px-2 py-0.5 bg-green-50 text-green-700 rounded-full text-xs font-medium">
           On Track
@@ -47,14 +47,14 @@ const FeesOverview = () => {
               {/* Progress semicircle */}
               <path
                 d="M 10 60 A 50 50 0 0 1 130 60"
-                stroke="#024698"
+                stroke="#026892"
                 strokeWidth="12"
                 fill="none"
                 strokeLinecap="round"
                 strokeDasharray={`${isLoaded ? (paidPercentage * 2.62) : 0} 262`}
                 style={{
                   transition: 'stroke-dasharray 1.5s ease-out, stroke 0.3s ease',
-                  stroke: isHovered ? '#013a7a' : '#024698'
+                  stroke: isHovered ? '#024a73' : '#026892'
                 }}
               />
             </svg>
@@ -104,12 +104,7 @@ const FeesOverview = () => {
 
       <div className="flex items-center justify-between pt-2 border-t border-gray-100">
         <p className="text-xs text-gray-500">Next due: Jan 15, 2024</p>
-        <button 
-          className="text-white text-xs font-medium py-1.5 px-3 rounded-lg transition-colors"
-          style={{ backgroundColor: '#024698' }}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#013a7a'}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#024698'}
-        >
+        <button className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-md text-xs font-medium text-gray-700 hover:bg-gray-100 transition-colors">
           Make Payment
         </button>
       </div>

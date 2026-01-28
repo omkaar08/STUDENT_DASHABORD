@@ -10,9 +10,24 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const TopBar = () => {
   return (
-    <div className="sticky top-0 z-50 w-full bg-card border-b border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-end gap-3 h-14">
+    <div className="fixed top-0 z-50 w-full bg-card border-b border-border">
+      <div className="flex items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
+        {/* Left: Brand */}
+        <div className="flex items-center gap-3">
+          <div
+            className="w-9 h-9 rounded-full flex items-center justify-center"
+            style={{ backgroundColor: '#026892' }}
+          >
+            <span className="text-white font-semibold text-sm">UR</span>
+          </div>
+          <div className="leading-tight">
+            <h1 className="text-base font-bold text-gray-900">SAMPS UR</h1>
+            <p className="text-xs text-gray-500">Student Dashboard</p>
+          </div>
+        </div>
+
+        {/* Right: Controls */}
+        <div className="flex items-center gap-3">
           {/* Year Selector */}
           <Select defaultValue="2025-2026">
             <SelectTrigger className="w-[120px] h-9 bg-background border-border text-sm font-medium">

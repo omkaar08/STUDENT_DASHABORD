@@ -15,20 +15,20 @@ const schedule: ScheduleItem[] = [
   {
     id: "1",
     courseCode: "CS302",
-    courseName: "Data Structures",
+    courseName: "Advanced Algorithms",
     instructor: "Dr. Brown",
-    room: "Room 304",
-    time: "10:00 AM — 11:00 AM",
+    room: "Room A-204",
+    time: "09:00 - 10:30",
     type: "lecture",
     status: "next",
   },
   {
     id: "2",
     courseCode: "CS301",
-    courseName: "Database Systems Lab",
+    courseName: "AI Fundamentals",
     instructor: "Dr. Smith",
-    room: "Lab 1",
-    time: "02:00 PM — 03:00 PM",
+    room: "Room B-203",
+    time: "11:00 - 12:30",
     type: "lab",
     status: "later",
   },
@@ -36,43 +36,27 @@ const schedule: ScheduleItem[] = [
 
 const TodaySchedule = () => {
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="text-base font-bold text-gray-900">Today&apos;s Schedule</h2>
-        <button className="text-xs font-medium text-gray-600 hover:text-gray-800 flex items-center gap-1">
-          View Full Timetable <ArrowRight className="w-3 h-3" />
-        </button>
-      </div>
+    <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
+      <h2 className="text-lg font-semibold text-gray-900 mb-4">Today's Schedule</h2>
 
-      <div className="space-y-2">
+      <div className="space-y-3">
         {schedule.map((item) => (
           <div
             key={item.id}
-            className={`flex items-center justify-between p-3 rounded-xl border transition-all duration-200 ${
-              item.status === "next" 
-                ? "border-blue-200 bg-blue-50/50" 
-                : "border-gray-100 bg-gray-50 hover:bg-gray-100"
-            }`}
+            className="bg-gray-50 p-3 rounded-lg border border-gray-200 transition-all duration-200"
           >
-            <div className="flex-1">
-              <h3 className="font-medium text-gray-900 text-sm mb-0.5">
-                {item.courseCode} — {item.courseName}
-              </h3>
-              <p className="text-xs text-gray-500">
-                {item.room} — {item.time}
-              </p>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
-                item.status === "next" 
-                  ? "bg-blue-100 text-blue-700" 
-                  : "bg-gray-100 text-gray-600"
-              }`}>
-                {item.status === "next" ? "Next" : "Later"}
-              </span>
-              <span className="px-1.5 py-0.5 rounded text-xs font-medium bg-gray-200 text-gray-700">
-                {item.type === "lecture" ? "Lecture" : "Lab"}
-              </span>
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 text-sm mb-1">
+                  {item.courseName}
+                </h3>
+                <p className="text-xs text-gray-600">
+                  {item.room} • {item.time}
+                </p>
+              </div>
+              <button className="px-3 py-1.5 bg-white border border-gray-300 rounded-md text-xs font-medium text-gray-700 hover:bg-gray-50 transition-colors">
+                View
+              </button>
             </div>
           </div>
         ))}

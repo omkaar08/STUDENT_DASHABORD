@@ -6,13 +6,14 @@ interface StatCardProps {
   subtitle: string;
   icon: LucideIcon;
   subtitleColor?: 'green' | 'red' | 'default';
+  iconColor?: string;
   trend?: {
     value: string;
     positive: boolean;
   };
 }
 
-const StatCard = ({ title, value, subtitle, icon: Icon, subtitleColor = 'default', trend }: StatCardProps) => {
+const StatCard = ({ title, value, subtitle, icon: Icon, subtitleColor = 'default', iconColor, trend }: StatCardProps) => {
   const getSubtitleColor = () => {
     switch (subtitleColor) {
       case 'green': return 'text-green-600';
@@ -25,8 +26,8 @@ const StatCard = ({ title, value, subtitle, icon: Icon, subtitleColor = 'default
     <div className="stat-card">
       <div className="flex items-center justify-between mb-2">
         <span className="text-sm font-bold text-gray-900">{title}</span>
-        <div className="stat-icon">
-          <Icon className="w-5 h-5" />
+        <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${iconColor || 'bg-blue-50'}`}>
+          <Icon className={`w-5 h-5 ${iconColor ? iconColor.replace('bg-', 'text-').replace('-50', '-600') : 'text-blue-600'}`} />
         </div>
       </div>
       <div className="space-y-1">
