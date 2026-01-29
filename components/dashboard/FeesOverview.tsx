@@ -16,7 +16,7 @@ const FeesOverview = () => {
   }, []);
 
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
+    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 h-full">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <CreditCard className="w-4 h-4 text-gray-600" />
@@ -104,7 +104,10 @@ const FeesOverview = () => {
 
       <div className="flex items-center justify-between pt-2 border-t border-gray-100">
         <p className="text-xs text-gray-500">Next due: Jan 15, 2024</p>
-        <button className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-md text-xs font-medium text-gray-700 hover:bg-gray-100 transition-colors">
+        <button 
+          className="px-3 py-1.5 text-white rounded-md text-xs font-medium hover:opacity-90 transition-colors"
+          style={{ backgroundColor: '#026892' }}
+        >
           Make Payment
         </button>
       </div>

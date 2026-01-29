@@ -23,8 +23,8 @@ export default function Dashboard() {
       <Sidebar isOpen={sidebarOpen} onToggle={() => setSidebarOpen(!sidebarOpen)} />
 
       {/* Main Content */}
-      <main className="lg:ml-64 min-h-screen pt-16">
-        <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-2">
+      <main className="lg:ml-60 min-h-screen pt-16">
+        <div className="max-w-none mx-auto px-1 sm:px-2 lg:px-3 py-2">
           <Header />
 
           {/* Stats Grid */}
@@ -62,8 +62,8 @@ export default function Dashboard() {
             <div className="animate-fade-in" style={{ animationDelay: "150ms" }}>
               <StatCard
                 title="Credits Earned"
-                value="45/120"
-                subtitle="37.5% of degree completed"
+                value="18/30"
+                subtitle="60% of semester completed"
                 subtitleColor="green"
                 icon={BarChart3}
                 iconColor="bg-purple-50"

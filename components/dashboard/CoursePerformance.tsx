@@ -20,7 +20,7 @@ const CoursePerformance = () => {
   }, []);
   
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm border border-gray-200 h-full">
+    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 h-full">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-lg font-bold text-gray-900">Course Performance</h2>
         <button className="text-xs font-medium text-gray-600 hover:text-gray-800 flex items-center gap-1">

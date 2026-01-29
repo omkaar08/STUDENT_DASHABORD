@@ -14,16 +14,6 @@ interface ScheduleItem {
 const schedule: ScheduleItem[] = [
   {
     id: "1",
-    courseCode: "CS301",
-    courseName: "AI Fundamentals",
-    instructor: "Dr. Smith",
-    room: "Room B-203",
-    time: "11:00 - 12:30",
-    type: "lab",
-    status: "later",
-  },
-  {
-    id: "2",
     courseCode: "CS302",
     courseName: "Advanced Algorithms",
     instructor: "Dr. Brown",
@@ -32,11 +22,21 @@ const schedule: ScheduleItem[] = [
     type: "lecture",
     status: "next",
   },
+  {
+    id: "2",
+    courseCode: "CS301",
+    courseName: "AI Fundamentals",
+    instructor: "Dr. Smith",
+    room: "Room B-203",
+    time: "11:00 - 12:30",
+    type: "lab",
+    status: "later",
+  },
 ];
 
 const TodaySchedule = () => {
   return (
-    <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
+    <div className="bg-white rounded-xl p-4 shadow-sm border border-gray-200 h-full">
       <h2 className="text-lg font-bold text-gray-900 mb-4">Today's Schedule</h2>
 
       <div className="space-y-3">
