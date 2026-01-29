@@ -49,7 +49,7 @@ const QuickActions = () => {
           return (
             <button
               key={action.id}
-              className={`w-full flex items-center gap-3 p-3.5 rounded-xl ${action.bgColor} transition-all duration-200`}
+              className={`w-full flex items-center gap-3 p-3.5 rounded-xl border border-gray-200 ${action.bgColor} transition-all duration-200`}
             >
               <IconComponent className={`w-5 h-5 ${action.iconColor}`} />
               <span className="text-sm font-medium text-gray-700">
