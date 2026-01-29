@@ -45,7 +45,7 @@ const iconMap = {
 const PendingActions = () => {
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">Pending Actions</h2>
+      <h2 className="text-lg font-bold text-gray-900 mb-4">Pending Actions</h2>
 
       <div className="space-y-3">
         {actions.slice(0, 3).map((action) => {

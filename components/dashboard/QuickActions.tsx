@@ -42,7 +42,7 @@ const quickActions: QuickAction[] = [
 const QuickActions = () => {
   return (
     <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
-      <h2 className="text-lg font-semibold text-gray-900 mb-4">Quick Actions</h2>
+      <h2 className="text-lg font-bold text-gray-900 mb-4">Quick Actions</h2>
       <div className="space-y-3">
         {quickActions.map((action) => {
           const IconComponent = action.icon;

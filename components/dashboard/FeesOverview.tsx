@@ -20,7 +20,7 @@ const FeesOverview = () => {
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
           <CreditCard className="w-4 h-4 text-gray-600" />
-          <h2 className="text-lg font-semibold text-gray-900">Fee Status</h2>
+          <h2 className="text-lg font-bold text-gray-900">Fee Status</h2>
         </div>
         <span className="px-2 py-0.5 bg-green-50 text-green-700 rounded-full text-xs font-medium">
           On Track

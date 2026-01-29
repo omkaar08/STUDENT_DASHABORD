@@ -18,7 +18,7 @@ const PaymentOverview = () => {
     <div className="bg-white rounded-2xl p-4 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-4">
         <BookOpen className="w-5 h-5 text-gray-600" />
-        <h2 className="text-lg font-semibold text-gray-900">Recent Activity</h2>
+        <h2 className="text-lg font-bold text-gray-900">Recent Activity</h2>
       </div>
 
       <div className="space-y-3">

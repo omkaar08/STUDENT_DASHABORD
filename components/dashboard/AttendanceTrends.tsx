@@ -27,7 +27,7 @@ const AttendanceTrends = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-1">
         <div className="flex items-center gap-2">
-          <h2 className="text-lg font-semibold text-gray-900">Attendance Trends</h2>
+          <h2 className="text-lg font-bold text-gray-900">Attendance Trends</h2>
          
         </div>
         <button className="text-sm font-medium text-[#026892] hover:text-[#024a73] flex items-center gap-1">
