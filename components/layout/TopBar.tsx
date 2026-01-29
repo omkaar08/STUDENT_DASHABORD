@@ -55,7 +55,7 @@ const TopBar = () => {
           {/* Notifications */}
           <button className="relative p-2 hover:bg-secondary rounded-lg transition-colors">
             <Bell className="w-5 h-5 text-muted-foreground" />
-            <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-primary text-primary-foreground text-xs rounded-full flex items-center justify-center font-medium">
+            <span className="absolute -top-0.5 -right-0.5 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-medium">
               3
             </span>
           </button>

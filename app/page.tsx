@@ -24,11 +24,11 @@ export default function Dashboard() {
 
       {/* Main Content */}
       <main className="lg:ml-64 min-h-screen pt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-7xl mx-auto px-2 sm:px-3 lg:px-4 py-2">
           <Header />
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-2">
             <div className="animate-fade-in" style={{ animationDelay: "0ms" }}>
               <StatCard
                 title="Current Percentage"
@@ -72,7 +72,7 @@ export default function Dashboard() {
           </div>
 
           {/* Main Three-Column Row */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-4">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-3">
             <div className="animate-fade-in" style={{ animationDelay: "200ms" }}>
               <QuickActions />
             </div>
